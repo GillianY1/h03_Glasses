@@ -1,0 +1,442 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+
+.main{
+
+}
+.header{
+    height:108px;
+    background-color: #AA0601;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 88px; /* margin or padding is better ? */
+}
+.fc_red{
+    color: #650300;
+}
+.fs_64{
+    font-size: 64px;
+}
+.fs_36{
+    font-size: 32px;
+}
+.font_20{
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.menu_list{
+    width: 492px; /* how to scale according to max-width ?? */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu_item{
+    padding: 40px 20px; /*why cannot  left_right 32px? */
+}
+
+.banner{
+    background-image: url("../img/68.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 840px;
+
+}
+
+.banner_content{
+    
+    margin-right: 300px;
+    padding-top: 350px;      /*請告訴我這邊通常會怎麼處理垂直置中 */
+}
+
+.content_serial{
+     /* 有沒有不用flex 的排法？讓p置中又靠右對齊 */
+     /* 請告訴我這邊建議的做法*/
+     font-size: 32px;
+     text-align: right;
+}
+.content_slogan{
+    font-size: 64px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.slogan{
+    /*height: 544px;*/
+    background-color: #AA06010D;
+    color: #650300;
+    text-align: center;
+    padding-top: 64px;  /* 對於要用margin 或是 padding 還是會不確定;全都用 mb 嗎？*/
+}
+
+.slogan-title{
+    margin: 0 auto;
+    font-size: 48px;
+    margin-bottom: 44px;
+}
+
+.slogan-items{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+}
+
+.slogan-items>li{    /*這樣好還是直接把li 命名為class 好 ？？*/
+    height: 289px;
+    width: 282px;   /*為什麼不會固定282*/
+    margin-right: 24px;
+} 
+.slogan-items>li img{
+    width: 100px;
+    height: 100px;
+    margin: 40px;
+}  
+.slogan-items>li h3{
+    height: 33px;
+    font-size: 24px;
+    line-height: 36px; /*line heigh: 36 px; block height 33px ???  */
+    margin: 0 auto 4px;
+} 
+
+.slogan-items>li p{
+    width: 208px;
+    margin: 0 auto;
+    color: #000;
+    text-align: left; /*鐘右邊有半格 ？？*/
+    line-height: 24px;
+}
+
+.classic{
+padding-top: 64px;
+padding-bottom: 80px;
+}
+
+.classic_title{
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 48px;
+    line-height: 72px;
+    color: #650300;
+}
+
+/*
+.classic_items{
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 320px;
+    margin: 0 auto 32px;
+    max-width: 1200px;
+}
+*/
+.classic_items{
+    height: 320px;
+    margin: 0 auto 32px;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.classic_items:nth-child(odd){
+    flex-direction: row-reverse;
+}
+
+.classic_link{
+    margin: 0 24px;
+}
+
+.classic_items1{
+    background-image: url(../img/8.png);
+}
+.classic_items2{
+    background-image: url(../img/152.png);
+}
+.classic_items3{
+    background-image: url(../img/28.png);
+}
+
+/* 怎麼做比較好 icon+a */
+/*.classic_item img{
+    display: inline-block;
+} 
+*/
+.classic_items a{
+    color: #AA0601;
+    font-size: 48px;
+    line-height: 72px;
+}
+
+.desing{
+    background-image: url(../img/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png);
+    background-repeat: no-repeat;
+    padding-top: 64px;
+    padding-bottom: 80px;
+}
+
+.design_title{
+    font-size: 48px;
+    line-height: 72px;
+    color: cornsilk;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.mores{
+    height: 384px;
+    margin: 0 190px;
+    margin-bottom: 60px;
+    display: flex;
+}
+
+.united{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /*左右都是 360 間隔30 怎麼排*/
+    margin-bottom: 144px;
+}
+
+.united_link{
+    color: #AA0601;
+    background-color: #fff;
+    width: 585px;
+    height: 592px;
+    font-size: 72px;
+    line-height: 108px;
+    display: block;
+    text-align: center;
+    padding-top: 249px;  /*不確定要怎麼垂直置中*/
+    font-weight: 700;
+}
+
+.u_l_d{  /*底層的半透明怎麼辦*/
+    background-image: url(../img/14.png);
+    width: 585px;
+    height: 592px;
+    margin-right: 30px;
+    /* opacity: .5; */
+}
+.u_l_y{
+    
+    background-image: url(../img/39.png);
+    width: 585px;
+    height: 592px;
+    opacity: .5; 
+}
+
+.contact{
+
+}
+
+.recommands_title{
+    margin-bottom: 60px;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    color: #fff;
+}
+
+.customers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.customer{
+    height: 445px;
+    width: 282px;
+    margin-right: 24px;
+    background-color: #fff;
+    overflow:hidden;
+}
+.customer_des{
+    padding: 16px;
+}
+
+
+.customer img{
+    /*width: 282px;*/  /*該怎麼處理圖片才不會變型又符合大小？？*/
+    height: 256px;
+    
+}
+
+.customer_des h3{
+    line-height: 21px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.update_time{
+    margin-top: 16px; /*or aligh left-button relative*/
+    line-height: 21px;
+    color: #707070;
+}
+
+.contact{
+    background-color: #AA06010D;
+}
+.contact_wrap{
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-bottom: 92px;
+    width: 792px;
+}
+
+.contact_wrap>h2{
+    color:#000;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.contact_wrap>p{
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.contact_label{
+    line-height: 24px;
+}
+
+.contact_form>lable , .contact_txt{
+    display: block;
+    font-style: 16px;
+} 
+
+.contact_txt{ /*為什麽input變成block還是只有19px,不是佔滿*/
+    /*要怎樣才可以input永遠左邊有一點空白*/
+    /*要怎樣可以把place holder顏色更淡點*/
+    background-color: #AA06010D; /* 為什麼這邊的顏色筆比背景深*/
+    opacity: 1;
+    border: 1px solid #000;
+    height: 50px;
+    width: 792px;
+    margin-bottom: 16px;
+}
+
+.contact_chkb{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #fff;
+    background-color: #AA06010D;
+}
+
+.contact_form>button{
+    margin: 0 auto; 
+    margin-top: 58px;
+    background-color: #AA0601;
+    color: #fff;
+    border: none;
+    width: 180px;
+    height: 54px;
+    display: block;
+}
+
+
+footer{
+    background-color: #AA0601;
+    color: #fff;
+    padding-top: 36px;
+    padding-bottom: 28px;
+}
+
+.footer_wrap{
+    max-width: 1150px;
+    margin: 0  auto;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footer-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.f_36_54{
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.fxs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.fxe{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.small_menu>li>a{
+    padding-right: 48px;
+}
+
+.small_media>li{
+    margin-right: 32px;
+    width: 48px;
+    height: 48px;
+}
+
+.footer_info{
+    height: 48px;
+    margin-bottom: 16px;
+    /*這麼小的範圍通常會用什麼方式排列？ 用flex會不會太大材小用*/
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.email_icon{
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+}
+
+.phone_icon{
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    padding: 0 12px 12px 0;
+}
+
+.copyrights{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #fff;
+    padding-top: 24px;
+}
+
+.cr_logos>img{
+    margin-right: 38px;
+}
+
+.cr_pl>a{
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 62px;
+}
