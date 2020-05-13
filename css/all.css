@@ -1,0 +1,1242 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: block;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*--- color --*/
+/*想找mateirla design 建議的色彩配色命名方式但找不到*/
+/*--some width--*/
+/*copy some cases here */
+.btnTest {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.btnTest {
+  padding: 6px 12px;
+  background: #AA0601;
+}
+
+.btnTest:hover {
+  background: #910501;
+}
+
+.btnTest:active {
+  background: #770401;
+}
+
+/*--- color --*/
+/*想找mateirla design 建議的色彩配色命名方式但找不到*/
+/*--some width--*/
+/*copy some cases here */
+.btnTest {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.btnTest {
+  padding: 6px 12px;
+  background: #AA0601;
+}
+
+.btnTest:hover {
+  background: #910501;
+}
+
+.btnTest:active {
+  background: #770401;
+}
+
+/*---- header -----*/
+/*---- footer ----*/
+/*for RWD layout cut */
+/*the father shall be position: relative; */
+/*the father shall be position: relative; */
+/*the father shall be position: relative; */
+/*copy for ex */
+/* =============just practice================ */
+/* 清除浮動使用, @include clearfix ; */
+/*use ... @include circle(30px, #ffff) */
+.white-spot {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: #fff;
+}
+
+.font_36 {
+  font-size: 2.25rem;
+}
+
+.font_64 {
+  font-size: 4rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5em;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+@media (max-width: 976px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 765px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 976px) {
+  .container {
+    width: 87.5% !important;
+    /*max-width: 672px;*/
+  }
+}
+
+@media (max-width: 765px) {
+  .container {
+    width: 93.6% !important;
+    /*max-width: 351px;
+       width: 100%;
+       padding: 0 12px;*/
+  }
+}
+
+.container-wrap {
+  padding: 4rem 0 5rem 0;
+}
+
+@media (max-width: 976px) {
+  .container-wrap {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width: 765px) {
+  .container-wrap {
+    padding: 1.5rem 0;
+  }
+}
+
+/*------- header/nav --------------*/
+.header {
+  height: 88px;
+  padding: 0 2.916% 0 4.583%;
+  background-color: #AA0601;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* ?? 什麼時候適合直接在 tag 加一個class; 還是使用mixin好  */
+}
+
+@media (max-width: 765px) {
+  .header {
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 765px) {
+  .header-logo {
+    width: 3rem;
+  }
+}
+
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-menu li {
+  margin-left: 64px;
+}
+
+.header-menu li a {
+  padding: 40px 0;
+}
+
+@media (max-width: 765px) {
+  .header-menu {
+    display: none;
+  }
+}
+
+/*------------banner --------------*/
+.first-banner {
+  height: 840px;
+  position: relative;
+  background-image: url("../img/68.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 765px) {
+  .first-banner {
+    height: 394px;
+  }
+}
+
+.banner-containter-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: right;
+  color: #650300;
+}
+
+.banner_slogan1 {
+  font-size: 28px;
+}
+
+@media (max-width: 976px) {
+  .banner_slogan1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 765px) {
+  .banner_slogan1 {
+    font-size: 1rem;
+  }
+}
+
+.banner_slogan2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+@media (max-width: 976px) {
+  .banner_slogan2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .banner_slogan2 {
+    font-size: 2rem;
+  }
+}
+
+.banner-services {
+  background-color: #AA06010D;
+  padding-top: 64px;
+  padding-bottom: 80px;
+}
+
+.banner-services h2 {
+  color: #650300;
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.banner-services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 765px) {
+  .banner-services-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.banner-services-list li {
+  /*height: 289px;*/
+  width: 23.5%;
+  padding: 0 3%;
+  padding-top: 1rem;
+  /*
+        p{
+            width: 208px;
+            margin: 0 auto 8px;
+            @include pad(){
+                width: 224px;
+            }
+        };
+        */
+}
+
+@media (max-width: 976px) {
+  .banner-services-list li {
+    width: 48.2%;
+    padding: 0 7.4%;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .banner-services-list li {
+    width: 100%;
+    padding: 0 18.2%;
+    margin-bottom: 1.75rem;
+  }
+}
+
+.banner-services-list li img {
+  /*這裏SVG 比較好的處理方式用img適合嗎？*/
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 40px;
+}
+
+.banner-services-list li h3 {
+  color: #650300;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 976px) {
+  .banner-services-list li h3 {
+    font-size: 20px;
+  }
+}
+
+.banner-services-list li p {
+  margin: 0 auto;
+}
+
+.products {
+  padding-top: 64px;
+  padding-bottom: 48px;
+  font-weight: bold;
+  /*text-transform: uppercase;*/
+}
+
+.products h2 {
+  color: #650300;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.products ul {
+  font-size: 3rem;
+}
+
+.product_link {
+  display: block;
+  max-width: 792px;
+  /*??? 什麼時候width要用比例值 例如 33%; 有點沒把握這裡實作的方式如何才好 */
+  max-height: 320px;
+  background-repeat: no-repeat;
+  text-align: center;
+  line-height: 320px;
+  text-indent: 101%;
+  font-size: 2rem;
+}
+
+@media (max-width: 976px) {
+  .product_link {
+    width: 61%;
+  }
+}
+
+@media (max-width: 765px) {
+  .product_link {
+    text-indent: 0;
+  }
+}
+
+.product_photo {
+  width: 66%;
+  height: 320px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 976px) {
+  .product_photo {
+    max-height: 168px;
+  }
+}
+
+@media (max-width: 765px) {
+  .product_photo {
+    width: 100%;
+    /*center*/
+    height: 134px;
+  }
+}
+
+.product_photo_title {
+  display: none;
+}
+
+@media (max-width: 765px) {
+  .product_photo_title {
+    height: 100%;
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.product1 {
+  background-image: url(../img/8.png);
+}
+
+/*
+.product1:before{
+    @include phone(){   ????這邊要怎麼排,才能把icon放在a tag的文字前面 
+        display: inline-block; 
+        content: '';
+        background-image: url('../img/iconfinder_44_2529968.svg');
+        background-size: 32px 32px;
+        background-position: left center;
+        height: 32px;
+        width: 32px; 
+   }
+}
+*/
+.product2 {
+  background-image: url(../img/152.png);
+}
+
+.product3 {
+  background-image: url(../img/28.png);
+}
+
+.product_name {
+  /*請問字體到底要怎樣做才正確 */
+  margin: 0 24px;
+  width: 34%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product_name img {
+  display: inline-block;
+  width: 48px;
+  margin-right: 8px;
+}
+
+.product_name a {
+  color: #AA0601;
+}
+
+@media (max-width: 765px) {
+  .product_name {
+    display: none;
+  }
+}
+
+.product-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 976px) {
+  .product-item {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.product-item:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 976px) {
+  .product-item:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+/*--------design ------*/
+.desing {
+  background-image: url(../img/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 64px;
+  padding-bottom: 480px;
+}
+
+.desing h2 {
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+
+.design-items {
+  /*box-sizing: content-box;
+    margin-left: -269px; 
+    margin-right: -269px;
+    */
+  max-width: 1540px;
+  width: 87.5%;
+  margin: 0 auto 3.75rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.design-items > img:first-child {
+  margin-right: 8px;
+}
+
+@media (max-width: 976px) {
+  .design-items {
+    margin: 0 auto 2.5rem auto;
+    width: 87.5%;
+  }
+}
+
+@media (max-width: 765px) {
+  .design-items {
+    margin: 0 auto 1.25rem auto;
+    width: 93.6%;
+  }
+}
+
+.design-items-left {
+  /*flex-basis: 375 ; why it doesn't work*/
+  width: 37.5%;
+}
+
+.design-items-right {
+  /*max-width: 958px;*/
+  width: 62.2%;
+  /*flex-basis: 622;; why it doesn't work*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.design_tmp {
+  /*WHY ??*/
+  height: 480px;
+  background-image: url(../img/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*----------recommand--------*/
+.recommands {
+  /*position: relative;*/
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin-top: -336px;
+  margin-bottom: 3.25rem;
+}
+
+.recommands h2 {
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.customers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.customers li {
+  /* max-width: 282px;*/
+  width: 23.5%;
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 976px) {
+  .customers li {
+    width: 48.21%;
+  }
+}
+
+@media (max-width: 765px) {
+  .customers li {
+    width: 100%;
+  }
+}
+
+.customers li img {
+  width: 100%;
+  height: auto;
+  /*how to deal with the heigh? it's different from the design*/
+}
+
+@media (max-width: 976px) {
+  .customers li img {
+    height: 256px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+
+.customer_des {
+  background-color: white;
+  padding: 1rem;
+  border: solid 1px #dee2e6;
+}
+
+.customer_des h3 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.update_time {
+  margin-top: 1rem;
+  /*or aligh left-button relative*/
+  line-height: 21px;
+  color: #707070;
+}
+
+/*------------contact us-------------*/
+.contact {
+  background-color: #AA06010D;
+}
+
+.contact_wrap {
+  margin: 0 auto;
+  padding-top: 4rem;
+  padding-bottom: 5.76rem;
+  width: 66%;
+  max-width: 792px;
+}
+
+.contact_wrap > h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact_wrap > p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 976px) {
+  .contact_wrap > p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.contact_wrap textarea {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #000;
+  margin-bottom: 1rem;
+  line-height: 2.75rem;
+}
+
+.contact_wrap textarea::-webkit-input-placeholder {
+  color: #707070;
+}
+
+.contact_wrap textarea:-ms-input-placeholder {
+  color: #707070;
+}
+
+.contact_wrap textarea::-ms-input-placeholder {
+  color: #707070;
+}
+
+.contact_wrap textarea::placeholder {
+  color: #707070;
+}
+
+.contact_wrap input[type=checkbox] {
+  /*how to change sytle of checkbox ?*/
+  display: inline-block;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #000;
+}
+
+.contact_wrap input[type=submit] {
+  margin: 0 auto;
+  margin-top: 58px;
+  background-color: #AA0601;
+  color: #fff;
+  border: none;
+  width: 180px;
+  height: 54px;
+  display: block;
+}
+
+.contact_txt {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #000;
+  margin-bottom: 1rem;
+  height: 50px;
+}
+
+.contact_txt::-webkit-input-placeholder, input[type=submit]::-webkit-input-placeholder {
+  opacity: 0.3;
+  color: black;
+}
+
+.contact_txt:-ms-input-placeholder, input[type=submit]:-ms-input-placeholder {
+  opacity: 0.3;
+  color: black;
+}
+
+.contact_txt::-ms-input-placeholder, input[type=submit]::-ms-input-placeholder {
+  opacity: 0.3;
+  color: black;
+}
+
+.contact_txt::placeholder, input[type=submit]::placeholder {
+  opacity: 0.3;
+  color: black;
+}
+
+/*------------ footer------------*/
+.footer {
+  color: #FFFFFF;
+  background-color: #AA0601;
+  position: relative;
+}
+
+.footer-header {
+  padding-top: 2.25rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 765px) {
+  .footer-header {
+    position: absolute;
+    top: 14px;
+    right: 3.2%;
+  }
+}
+
+.footer-nav-icon {
+  padding: 0 1rem;
+}
+
+@media (max-width: 976px) {
+  .footer-nav-icon {
+    margin: 0;
+    padding: .625rem .75rem;
+  }
+}
+
+@media (max-width: 976px) {
+  .footer-nav-icon img {
+    width: 1.5rem;
+  }
+}
+
+.footer-nav-btn {
+  padding: 1rem 1.5rem;
+  line-height: 1.375;
+}
+
+@media (max-width: 976px) {
+  .footer-nav-btn {
+    padding: 1rem 1.25rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .footer-nav-btn {
+    display: none;
+  }
+}
+
+/*
+.small-media{
+    @include flex-row-sb;
+    >li{
+        margin-left: 2rem;
+        @include pad(){
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        img{
+            @include pad(){
+                width:1.5rem;
+            }
+        } 
+    }
+    @include phone(){
+        position: absolute;
+        right: 3.2%;
+        top: 14px;
+    }
+}
+*/
+.footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-info img {
+  width: 48px;
+  height: 48px;
+  margin-right: 0.75rem;
+}
+
+@media (max-width: 976px) {
+  .footer-info img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.footer-info a {
+  font-size: 2.25rem;
+}
+
+@media (max-width: 976px) {
+  .footer-info a {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .footer-phone {
+    padding-top: 1.5rem;
+  }
+}
+
+.footer_info:last-child {
+  margin-bottom: 1.5rem;
+}
+
+.copyrights {
+  border-top: solid 1px #FFFFFF;
+  padding: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 765px) {
+  .copyrights {
+    display: block;
+  }
+}
+
+.copyrights li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 765px) {
+  .copyrights li {
+    display: block;
+  }
+}
+
+@media (max-width: 765px) {
+  .copyrights-content a {
+    display: block;
+    margin-top: 0.75rem;
+  }
+}
+
+.copyrights-content-service {
+  margin-left: 4rem;
+}
+
+@media (max-width: 765px) {
+  .copyrights-content-service {
+    margin-left: 0px;
+  }
+}
+
+.copyrights-logo {
+  margin-right: 38px;
+}
+
+@media (max-width: 976px) {
+  .copyrights-logo {
+    display: none;
+  }
+}
+
+@media (max-width: 765px) {
+  .copyrights-logo {
+    display: block;
+    position: absolute;
+    margin: 0px;
+    bottom: 20px;
+    right: 3.2%;
+    width: 46px;
+  }
+  .copyrights-logo img {
+    width: 100%;
+  }
+}
+
+.mla {
+  margin-left: auto;
+}
+
+.pl0 {
+  padding-left: 0px;
+}
+
+.pr0 {
+  padding-right: 0px;
+}

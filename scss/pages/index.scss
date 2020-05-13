@@ -1,0 +1,656 @@
+@import "../reset";
+@import "../variable";
+@import "../layout";
+@import "../grid";  /*for RWD layout cut */
+@import "../utility";
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5em;
+  }
+p{
+    line-height: 1.5em;
+}
+h1,h2,h3,h4,h5,h6{
+    line-height: 1.2em;
+    font-weight: bold;
+}
+
+h2{
+    font-size: $font_48;
+    @include pad(){
+        font-size: $font_32;
+    }
+    @include phone(){
+        font-size: $font_24;
+    }
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+}
+
+@mixin padding-0-80 {
+    padding: 0 80px;
+}
+
+.container{
+    max-width: $public_container_width;
+    margin: 0 auto;
+    @include big-pad(){
+        width: 90%!important
+    }
+    @include pad(){
+        width: 87.5%!important;
+        /*max-width: 672px;*/
+    }
+    @include phone(){
+        width: 93.6%!important;
+       /*max-width: 351px;
+       width: 100%;
+       padding: 0 12px;*/
+    }
+}
+
+.container-wrap{
+    padding: 4rem 0 5rem 0;
+    @include pad(){
+        padding: 2.5rem 0;
+    }
+    @include phone(){
+        padding: 1.5rem 0;
+    }
+}
+
+/*------- header/nav --------------*/
+.header{
+    height: 88px;    
+    padding: 0 2.916% 0 4.583% ;         
+    background-color:$primary_red;
+    @include flex-row-sb; /* ?? 什麼時候適合直接在 tag 加一個class; 還是使用mixin好  */
+    @include phone(){
+        height: 50px;
+        @include flex-row-center;
+    }
+}
+.header-logo{
+    @include phone(){
+        width: 3rem;
+    }
+}
+
+.header-menu{
+    @include flex-row-center;
+    li{
+        margin-left: 64px;
+        a{
+            padding: 40px 0 ;
+        }
+    }
+    @include phone(){
+        display: none;
+    }
+}
+
+/*------------banner --------------*/
+.first-banner{
+    height: 840px;
+    position: relative;
+    background-image: url("../img/68.png");
+    @include bg-center;
+    
+    @include phone(){
+        height: 394px;
+    }
+}
+
+.banner-containter-wrap{
+    @include center-center;
+    text-align: right;
+    color: $second_red; 
+}
+
+.banner_slogan1{
+    font-size: 28px;
+    @include pad(){
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+    @include phone(){
+        font-size: 1rem;
+    }
+}
+.banner_slogan2{
+    font-size: 4rem;
+    font-weight: bold;
+    @include pad(){
+        font-size: 3rem;
+    }
+    @include phone(){
+        font-size: 2rem;
+    }
+}
+
+.banner-services{
+    background-color: $pink_bg;
+    
+    padding-top: 64px;
+    padding-bottom: 80px;
+    h2{
+        color: $second_red;
+        text-align: center;
+        margin-bottom: 44px;
+    }
+}
+
+.banner-services-list{
+    @include flex-row-sb;
+    flex-wrap: wrap;
+    @include phone(){
+        @include flex-row-center;
+    }
+    li{
+        /*height: 289px;*/
+        width: 23.5%;   
+	    padding: 0 3%;
+        padding-top: 1rem;
+
+        @include pad(){
+            width: 48.2%;
+		    padding: 0 7.4%;
+		    margin-bottom: 2.5rem
+        }
+        @include phone(){
+            width: 100%;
+		    padding: 0 18.2%;
+		    margin-bottom: 1.75rem
+        }
+
+        img{            /*這裏SVG 比較好的處理方式用img適合嗎？*/
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 40px;
+        };
+        h3{
+            color: $second_red;
+            font-size: $font_24;
+            text-align: center;
+            margin-bottom: 8px;
+            @include pad(){
+                font-size: $font_20;
+            }
+        };
+        p{
+            margin: 0 auto;
+        }
+        /*
+        p{
+            width: 208px;
+            margin: 0 auto 8px;
+            @include pad(){
+                width: 224px;
+            }
+        };
+        */
+    }
+}
+
+.products{
+    padding-top: 64px;
+    padding-bottom: 48px;
+    font-weight: bold;
+    
+    /*text-transform: uppercase;*/
+    h2{
+        color: $second_red;
+        text-align: center;
+        margin-bottom: 60px;
+    };
+    ul{
+        font-size: 3rem;
+    };  
+}
+
+.product_link{
+    display: block;
+    max-width: 792px;    /*??? 什麼時候width要用比例值 例如 33%; 有點沒把握這裡實作的方式如何才好 */
+    max-height: 320px;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height:320px;
+    text-indent: 101%;
+    font-size: 2rem;
+    @include pad(){
+        width:61%;
+    }
+    @include phone(){
+        text-indent: 0;
+    }
+}
+
+.product_photo{
+    width:  66%;;   
+    height: 320px;
+    
+    @include bg-center;
+    @include pad(){
+        max-height: 168px;
+    }
+    @include phone(){
+        width: 100%; /*center*/
+        height: 134px;
+    }
+    
+
+}
+
+.product_photo_title{
+    display: none;
+    @include phone(){
+        height: 100%;
+        display: block;
+        @include flex-row-center;
+    }
+}
+
+.product1{
+    background-image: url(../img/8.png);
+}
+/*
+.product1:before{
+    @include phone(){   ????這邊要怎麼排,才能把icon放在a tag的文字前面 
+        display: inline-block; 
+        content: '';
+        background-image: url('../img/iconfinder_44_2529968.svg');
+        background-size: 32px 32px;
+        background-position: left center;
+        height: 32px;
+        width: 32px; 
+   }
+}
+*/
+.product2{
+    background-image: url(../img/152.png);
+}
+.product3{
+    background-image: url(../img/28.png);
+}
+
+.product_name{   
+                  /*請問字體到底要怎樣做才正確 */
+    margin: 0 24px;
+    width: 34%;
+    @include flex-row-center;
+
+    img{
+        display: inline-block;  
+        width: 48px;
+        margin-right: 8px;
+    };
+    a{
+        color:$primary_red;
+    }; 
+    
+    @include phone(){
+        display: none;
+    }
+}
+
+.product-item{
+    @include flex-row-start;
+    margin-bottom: $font_28;
+    @include pad(){
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+.product-item:nth-child(even){
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    @include pad(){
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+/*--------design ------*/
+.desing{
+    background-image: url(../img/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png);
+    @include bg-center;
+    padding-top: 64px;
+    padding-bottom: 480px;
+    h2{
+        text-align: center;
+        color: $white;
+        margin-bottom: 60px;
+    }
+}
+
+.design-items{
+    /*box-sizing: content-box;
+    margin-left: -269px; 
+    margin-right: -269px;
+    */
+    max-width: 1540px;
+    width: 87.5%;
+	margin: 0 auto 3.75rem auto;
+    @include flex-row-center-top;
+    >img:first-child{
+        margin-right: 8px;
+    };
+    @include pad(){
+        margin: 0 auto 2.5rem auto;
+		width: 87.5%
+    }
+    @include phone(){
+        margin: 0 auto 1.25rem auto;
+        width: 93.6%;
+    }
+}
+
+.design-items-left{
+    /*flex-basis: 375 ; why it doesn't work*/
+    width: 37.5%;
+}
+
+.design-items-right{
+    /*max-width: 958px;*/
+    width: 62.2%;
+    /*flex-basis: 622;; why it doesn't work*/
+    @include flex-cloumn-center-start;
+}
+
+.design_tmp{ /*WHY ??*/
+    height: 480px;
+    background-image: url(../img/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png);
+    @include bg-center;
+}
+
+/*----------recommand--------*/
+
+.recommands{
+    /*position: relative;*/
+    box-sizing: content-box;
+    margin-top: -336px;
+    margin-bottom: 3.25rem;
+
+    h2{
+        color: $white;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+}
+
+.customers{
+    @include  flex-row-sb;
+    flex-wrap: wrap;
+
+    li{
+       /* max-width: 282px;*/
+        width: 23.5%;
+        height:auto;
+        margin-bottom: 1.25rem;
+
+        @include pad(){
+            width: 48.21%;
+        }
+        @include phone(){
+            width: 100%;
+        }
+        img{
+            width: 100%;
+            height: auto; /*how to deal with the heigh? it's different from the design*/
+        
+            @include pad(){
+                height: 256px;
+		        -o-object-fit: cover;
+		        object-fit: cover
+            }    
+        }
+    }
+}
+
+.customer_des{
+    background-color: white;
+    padding: 1rem;
+    border: solid 1px #dee2e6;
+    h3{
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+}
+
+.update_time{
+    margin-top: 1rem; /*or aligh left-button relative*/
+    line-height: 21px;
+    color: #707070;
+}
+/*------------contact us-------------*/
+.contact{
+    background-color: #AA06010D;
+}
+.contact_wrap{
+    margin: 0 auto;
+    padding-top: 4rem;
+    padding-bottom: 5.76rem;
+    width: 66%;
+    max-width: 792px;
+    >h2{
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    >p{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 1.5rem;
+        @include pad(){
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 700;
+        }
+    }
+
+    textarea{
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #000;
+        margin-bottom:1rem;
+        line-height: 2.75rem;
+    }
+    textarea::placeholder{
+        color:#707070;
+    }
+
+    input[type=checkbox]{   /*how to change sytle of checkbox ?*/
+        display: inline-block;
+        background-color: transparent; 
+        width: 24px;
+        height: 24px;
+        border: 1px solid #000;
+    }
+
+    input[type=submit]{
+        margin: 0 auto; 
+        margin-top: 58px;
+        background-color: #AA0601;
+        color: #fff;
+        border: none;
+        width: 180px;
+        height: 54px;
+        display: block;
+    }
+}
+
+.contact_txt{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #000;
+    margin-bottom:1rem;
+    height: 50px;
+}
+
+.contact_txt::placeholder, input[type=submit]::placeholder{
+    opacity: 0.3;
+    color: black;
+}
+
+/*------------ footer------------*/
+.footer{
+    color: $white;
+    background-color: $primary_red;
+    position: relative;
+}
+
+.footer-header{
+    padding-top: 2.25rem;
+    margin-bottom:2rem;
+    
+    @include flex-row-center;
+    @include phone(){
+        position: absolute;
+        top: 14px;
+        right: 3.2%;
+    }
+    
+}
+.footer-nav-icon{
+    padding: 0 1rem;
+    @include pad(){
+        margin: 0;
+		padding: .625rem .75rem;
+    }
+    img{
+        @include pad(){
+            width: 1.5rem;
+        }
+    }
+}
+
+.footer-nav-btn{
+    padding: 1rem 1.5rem;
+    line-height: 1.375;
+    @include pad(){
+        padding: 1rem 1.25rem;
+    }
+    @include phone(){
+        display: none;
+    }
+}
+
+/*
+.small-media{
+    @include flex-row-sb;
+    >li{
+        margin-left: 2rem;
+        @include pad(){
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        img{
+            @include pad(){
+                width:1.5rem;
+            }
+        } 
+    }
+    @include phone(){
+        position: absolute;
+        right: 3.2%;
+        top: 14px;
+    }
+}
+*/
+
+.footer-info{
+    @include flex-row-start;
+    margin-bottom: 1rem;
+    
+    img{
+        width:48px ;
+        height:48px;
+        margin-right: 0.75rem;
+        @include pad(){
+            width:32px;
+            height: 32px;
+        }
+    }
+    a{
+        font-size: 2.25rem;
+        @include pad(){
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.footer-phone{
+    @include phone(){
+        padding-top: 1.5rem;
+    }
+}
+
+
+.footer_info:last-child{
+    margin-bottom: 1.5rem;
+}
+
+.copyrights{
+    border-top: solid 1px  $white;
+    padding: 1.5rem 0;
+    @include flex-row-sb;  
+    @include phone(){
+        display: block;
+    }
+    li{
+        @include flex-row-center;
+        @include phone(){
+           display: block;
+        }
+    }
+}
+
+.copyrights-content a{
+    @include phone{
+        display: block;
+        margin-top: 0.75rem;
+    }
+}
+.copyrights-content-service{
+    margin-left: 4rem;
+    @include phone{
+        margin-left: 0px;  
+    }
+}
+
+.copyrights-logo{
+    margin-right: 38px;
+    @include pad(){
+        display: none;
+    }
+    @include phone {
+        display: block;
+        position: absolute;
+        margin: 0px;
+        bottom: 20px;
+        right: 3.2%;
+        width: 46px;
+        img{
+            width: 100%;
+        }
+    }
+}
+.mla{
+    margin-left: auto;
+}
+
+.pl0{
+    padding-left: 0px;
+}
+
+.pr0{
+    padding-right: 0px;
+}
+
+

@@ -1,0 +1,17 @@
+@mixin big-pad{
+    @media (max-width: 1200px){
+        @content
+    }
+}
+
+@mixin pad{
+    @media (max-width: 976px){
+        @content
+    }
+}
+
+@mixin phone{
+    @media (max-width: 765px){
+        @content
+    }
+}

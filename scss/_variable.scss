@@ -1,0 +1,35 @@
+/*--- color --*/
+$primary_red: #AA0601;  /*想找mateirla design 建議的色彩配色命名方式但找不到*/
+$second_red: #650300;
+$pink_bg:#AA06010D;
+$gray:#DEE2E6;
+$white: #FFFFFF;
+$black:#000000;
+
+/*--some width--*/
+$public_container_width: 1200px;
+
+$font_20: 20px;
+$font_24: 1.5rem;
+$font_28: 1.75rem;
+$font_32: 2rem;
+$font_36: 2.25rem;
+$font_48: 3rem;
+$font_64: 4rem;
+
+/*copy some cases here */
+%transition {
+    transition: all .3s ease;
+}
+
+.btnTest {
+    padding: 6px 12px;
+    background: $primary_red;
+    @extend %transition;
+    &:hover {
+        background: darken($primary_red, 5%);
+    }
+    &:active {
+        background: darken($primary_red, 10%);
+    }
+}
