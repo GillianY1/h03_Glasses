@@ -392,12 +392,14 @@ a {
 }
 
 .banner_slogan1 {
-  font-size: 28px;
+  font-size: 36px;
+  line-height: 50px;
 }
 
 @media (max-width: 976px) {
   .banner_slogan1 {
-    font-size: 1.25rem;
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 500;
   }
 }
@@ -405,23 +407,27 @@ a {
 @media (max-width: 765px) {
   .banner_slogan1 {
     font-size: 1rem;
+    line-height: 22px;
   }
 }
 
 .banner_slogan2 {
   font-size: 4rem;
   font-weight: bold;
+  line-height: 90px;
 }
 
 @media (max-width: 976px) {
   .banner_slogan2 {
     font-size: 3rem;
+    line-height: 68px;
   }
 }
 
 @media (max-width: 765px) {
   .banner_slogan2 {
     font-size: 2rem;
+    line-height: 3rem;
   }
 }
 
@@ -1032,6 +1038,8 @@ a {
     position: absolute;
     top: 14px;
     right: 3.2%;
+    padding: 0;
+    margin: 0;
   }
 }
 

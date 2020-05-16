@@ -1,0 +1,233 @@
+/*basic*/
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5rem;
+  }
+h1,h2,h3,h4,h5,h6{
+    line-height: 1.2rem;
+    font-weight: bold;
+}
+
+
+h2{
+    font-size: $font_48;
+    @include pad(){
+        font-size: $font_32;
+    }
+    @include phone(){
+        font-size: $font_24;
+    }
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.container{
+    max-width: $public_container_width;
+    margin: 0 auto;
+    @include big-pad(){
+        padding: 0 3.75rem;
+       /* width: 90%!important*/
+    }
+    @include pad(){
+        padding: 0 3rem;
+       /* width: 87.5%!important;*/  
+    }
+    @include phone(){
+        padding: 0 .75rem;
+       /* width: 93.6%!important;*/
+    }
+}
+
+/*------- header/nav --------------*/
+.header{
+    height: 88px;    
+    padding: 0 2.916% 0 4.583% ;         
+    background-color:$primary_red;
+    @include flex-row-sb; /* ?? 什麼時候適合直接在 tag 加一個class; 還是使用mixin好  */
+    @include phone(){
+        height: 50px;
+        @include flex-row-center;
+    }
+}
+.header-logo{
+    @include phone(){
+        width: 3rem;
+    }
+}
+
+.header-menu{
+    @include flex-row-center;
+    li{
+        margin-left: 64px;
+        a{
+            padding: 40px 0 ;
+        }
+    }
+    @include phone(){
+        display: none;
+    }
+}
+
+
+/*------------ footer------------*/
+.footer{
+    color: $white;
+    background-color: $primary_red;
+    position: relative;
+}
+
+.footer-header{
+    padding-top: 2.25rem;
+    margin-bottom:2rem;
+    
+    @include flex-row-center;
+    @include phone(){
+        position: absolute;
+        top: 14px;
+        right: 3.2%;
+        padding: 0;
+        margin:0;
+    }
+    
+}
+.footer-nav-icon{
+    display: block;
+    padding: 0 1rem;
+    @include pad(){
+        margin: 0;
+		padding: .625rem .75rem;
+    }
+    img{
+        @include pad(){
+            width: 1.5rem;
+        }
+    }
+}
+
+.footer-nav-btn{
+    padding: 1rem 1.5rem;
+    line-height: 1.375;
+    @include pad(){
+        padding: 1rem 1.25rem;
+    }
+    @include phone(){
+        display: none;
+    }
+}
+
+/*
+.small-media{
+    @include flex-row-sb;
+    >li{
+        margin-left: 2rem;
+        @include pad(){
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        img{
+            @include pad(){
+                width:1.5rem;
+            }
+        } 
+    }
+    @include phone(){
+        position: absolute;
+        right: 3.2%;
+        top: 14px;
+    }
+}
+*/
+
+.footer-info{
+    @include flex-row-start;
+    margin-bottom: 1rem;
+    
+    img{
+        width:48px ;
+        height:48px;
+        margin-right: 0.75rem;
+        @include pad(){
+            width:32px;
+            height: 32px;
+        }
+    }
+    a{
+        font-size: 2.25rem;
+        @include pad(){
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.footer-phone{
+    @include phone(){
+        padding-top: 1.5rem;
+    }
+}
+
+
+.footer_info:last-child{
+    margin-bottom: 1.5rem;
+}
+
+.copyrights{
+    border-top: solid 1px  $white;
+    padding: 1.5rem 0;
+    @include flex-row-sb;  
+    @include phone(){
+        display: block;
+    }
+    li{
+        @include flex-row-center;
+        @include phone(){
+           display: block;
+        }
+    }
+}
+
+.copyrights-content a{
+    @include phone{
+        display: block;
+        margin-top: 0.75rem;
+    }
+}
+.copyrights-content-service{
+    margin-left: 4rem;
+    @include phone{
+        margin-left: 0px;  
+    }
+}
+
+.copyrights-logo{
+    margin-right: 38px;
+    @include pad(){
+        display: none;
+    }
+    @include phone {
+        display: block;
+        position: absolute;
+        margin: 0px;
+        bottom: 20px;
+        right: 3.2%;
+        width: 46px;
+        img{
+            width: 100%;
+        }
+    }
+}
+.mla{
+    margin-left: auto;
+}
+
+.pl0{
+    padding-left: 0px;
+}
+
+.pr0{
+    padding-right: 0px;
+}
+
+
