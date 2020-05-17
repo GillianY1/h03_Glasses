@@ -4,3 +4,9 @@
 @import "../grid";  /*for RWD layout cut */
 @import "../utility";
 @import "../base";
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+

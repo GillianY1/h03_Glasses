@@ -108,6 +108,9 @@ a{
     @include center-center;
     text-align: right;
     color: $second_red; 
+    @include pad(){
+        @include vertical-center-align-right;
+    }
 }
 
 .banner_slogan1{
