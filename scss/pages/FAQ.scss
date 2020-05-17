@@ -10,3 +10,73 @@ img {
     height: auto;
 }
 
+/*-------banner--------*/
+.banner{
+    background-image: url(../../img/72@2x.png);
+    background-position: center center;
+    background-size: cover;
+    .container{
+        padding-top: 214px;
+        @include pad(){
+            padding-top: 273px;
+        }
+        @include phone(){
+            padding-top: 103px;
+        }
+        h2{
+            margin-right: 10px;
+            font-size: 4rem;
+            @include pad(){
+                font-size: 3rem;
+            }
+            @include phone(){
+                font-size: 1.75rem;
+            }
+        }
+        img{
+            width: 3.625rem;
+            height: auto;
+            @include pad(){
+                width: 3rem;
+            }
+            @include phone(){
+                width: 1.5rem;
+            }
+
+        }
+    }
+}
+
+/*---------questions----------*/
+.content{
+    color: #000;
+}
+
+.card{
+    .card-item-header, p{
+        border: $black 1px solid;
+    }
+}
+
+.question-wrap{
+    padding: 22px 38px;
+    >a>h4{
+        color: $black;
+    }
+    @include pad(){
+        padding: 1rem 1.5rem;
+    }
+    @include phone(){
+        padding: 1rem 1rem;
+    }
+}
+
+.question-answer{
+    padding:0px;
+    max-height: 0px;
+
+    &.active{
+        max-height: 100%;
+
+    }
+}

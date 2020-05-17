@@ -190,6 +190,38 @@ img {
 /*---- header -----*/
 /*---- footer ----*/
 /*for RWD layout cut */
+.flex-row-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-row-sb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /*the father shall be position: relative; */
 /*the father shall be position: relative; */
 /*the father shall be position: relative; */
@@ -656,4 +688,99 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/*-------banner--------*/
+.banner {
+  background-image: url(../../img/72@2x.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.banner .container {
+  padding-top: 214px;
+}
+
+@media (max-width: 976px) {
+  .banner .container {
+    padding-top: 273px;
+  }
+}
+
+@media (max-width: 765px) {
+  .banner .container {
+    padding-top: 103px;
+  }
+}
+
+.banner .container h2 {
+  margin-right: 10px;
+  font-size: 4rem;
+}
+
+@media (max-width: 976px) {
+  .banner .container h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .banner .container h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.banner .container img {
+  width: 3.625rem;
+  height: auto;
+}
+
+@media (max-width: 976px) {
+  .banner .container img {
+    width: 3rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .banner .container img {
+    width: 1.5rem;
+  }
+}
+
+/*---------questions----------*/
+.content {
+  color: #000;
+}
+
+.card .card-item-header, .card p {
+  border: #000000 1px solid;
+}
+
+.question-wrap {
+  padding: 22px 38px;
+}
+
+.question-wrap > a > h4 {
+  color: #000000;
+}
+
+@media (max-width: 976px) {
+  .question-wrap {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .question-wrap {
+    padding: 1rem 1rem;
+  }
+}
+
+.question-answer {
+  padding: 0px;
+  max-height: 0px;
+}
+
+.question-answer.active {
+  max-height: 100%;
 }
