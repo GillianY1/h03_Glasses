@@ -789,10 +789,14 @@ img {
 
 .card .card-item-header, .card p {
   border: #000000 1px solid;
+  border-top: 0px;
+}
+
+.card:first-child .card-item-header {
+  border-top: #000000 1px solid;
 }
 
 .card h4 {
-  font-weight: 500;
   font-size: 1.75rem;
 }
 

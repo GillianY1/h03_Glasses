@@ -71,17 +71,19 @@ img {
             margin-bottom: 1rem;
             font-size: 1.25rem;
         }
-
     }
-    
 }
 
 .card{
-    .card-item-header, p{
+    .card-item-header,p {
         border: $black 1px solid;
+        border-top: 0px;
     }
+    &:first-child .card-item-header{
+        border-top: $black 1px solid;
+    }
+
     h4{
-        font-weight: 500;
         font-size: 1.75rem;
         @include pad(){
             font-size: 1rem;
@@ -90,7 +92,6 @@ img {
 }
 
 .question-wrap{
-    
     padding: 22px 38px;
     >a>h4{
         color: $black;
@@ -105,14 +106,17 @@ img {
 
 .question-answer{
     background-color: #F2F2F2;
-    &.active{
-       
-    }
 }
 
-.card:not(.active) .ic_up{
-    display: none;
+.card:not(.active) {
+    .ic_up{
+        display: none;
+    }
+    
 }
-.card.active .ic_down{
-    display: none;
+
+.card.active {
+    .ic_down{
+        display: none;
+    }
 }
