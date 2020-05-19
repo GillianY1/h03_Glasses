@@ -692,7 +692,7 @@ img {
 
 /*-------banner--------*/
 .banner {
-  background-image: url(../../img/72@2x.png);
+  background-image: url(../../img/72.png);
   background-position: center center;
   background-size: cover;
 }
@@ -837,4 +837,3 @@ img {
 .card.active .ic_down {
   display: none;
 }
-/*# sourceMappingURL=FAQ.css.map */
